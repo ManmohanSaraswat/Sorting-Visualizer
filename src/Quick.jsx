@@ -1,4 +1,5 @@
 import {Refresh} from "./Array";
+import {RED_COLOR} from "./Constants";
 
 let top = 100,
     stack = [],
@@ -35,8 +36,8 @@ function Quick(a, color, setVal, setColor, setProgress, mm) {
                 temp = a[i];
                 a[i] = a[j];
                 a[j] = temp;
-                color[i] = "red";
-                color[j] = "red";
+                color[i] = RED_COLOR;
+                color[j] = RED_COLOR;
             } else {
                 color[j] = "green";
             }

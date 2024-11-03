@@ -1,4 +1,5 @@
 import {Refresh} from "./Array";
+import {RED_COLOR} from "./Constants";
 
 let m = 0,
     j = 0,
@@ -18,11 +19,11 @@ function Selection(a, color, setVal, setColor, setProgress, mm) {
             i = m;
             setColor([...color]);
         }
-        color[i] = "red";
+        color[i] = RED_COLOR;
         if (a[j] < a[i]) {
             color[i] = "pink";
             i = j;
-            color[i] = "red";
+            color[i] = RED_COLOR;
         }
         color[j] = "green";
         j += 1;

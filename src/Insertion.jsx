@@ -1,4 +1,5 @@
 import {Refresh} from "./Array";
+import {RED_COLOR} from "./Constants";
 
 let m = 0,
     n = -1,
@@ -14,7 +15,7 @@ function Insertion(a, color, setVal, setColor, setProgress, mm) {
                 j = a[i - 2];
                 a[i - 1] = t;
                 color[i - 1] = "green";
-                color[i] = "red";
+                color[i] = RED_COLOR;
                 i -= 1;
             } else {
                 n = -1;

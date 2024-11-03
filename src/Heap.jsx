@@ -1,4 +1,5 @@
 import {Refresh} from "./Array";
+import {RED_COLOR} from "./Constants";
 
 let largest,
     x,
@@ -36,8 +37,8 @@ function Heap(arr, color, setVal, setColor, setProgress, mm) {
             let temp = arr[i];
             arr[i] = arr[largest];
             arr[largest] = temp;
-            color[largest] = "red";
-            color[i] = "red";
+            color[largest] = RED_COLOR;
+            color[i] = RED_COLOR;
             setColor([...color]);
             color[largest] = "pink";
             color[i] = "pink";
