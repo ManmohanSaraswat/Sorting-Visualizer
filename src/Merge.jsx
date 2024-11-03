@@ -1,4 +1,5 @@
 import {Refresh} from "./Array";
+import {PINK_COLOR} from "./Constants";
 
 let curr_size = 1,
     l = 0,
@@ -39,24 +40,24 @@ function Merge(arr, color, setVal, setColor, setProgress, mm) {
                 if (x < n1 && y < n2) {
                     if (L[x] <= R[y]) {
                         arr[k] = L[x];
-                        color[k] = "pink";
+                        color[k] = PINK_COLOR;
                         x++;
                     } else {
                         arr[k] = R[y];
-                        color[k] = "pink";
+                        color[k] = PINK_COLOR;
                         y++;
                     }
                     k++;
                 } else {
                     if (x < n1) {
                         arr[k] = L[x];
-                        color[k] = "pink";
+                        color[k] = PINK_COLOR;
                         x++;
                         k++;
                     }
                     if (y < n2) {
                         arr[k] = R[y];
-                        color[k] = "pink";
+                        color[k] = PINK_COLOR;
                         y++;
                         k++;
                     }

@@ -1,3 +1,5 @@
+import {PINK_COLOR} from "./Constants";
+
 function shuffle_array(a, setVal) {
     let tmp,
         current,
@@ -25,7 +27,7 @@ function Array(a, color, setVal, setColor, event) {
     else x = 1.1;
     for (let i = 0; i < len; ++i) {
         a[i] = (1 + i) * x;
-        color[i] = "pink";
+        color[i] = PINK_COLOR;
     }
     shuffle_array(a, setVal);
     setColor([...color]);

@@ -1,5 +1,5 @@
 import {Refresh} from "./Array";
-import {RED_COLOR} from "./Constants";
+import {GREEN_COLOR, PINK_COLOR, RED_COLOR} from "./Constants";
 
 let largest,
     x,
@@ -40,14 +40,14 @@ function Heap(arr, color, setVal, setColor, setProgress, mm) {
             color[largest] = RED_COLOR;
             color[i] = RED_COLOR;
             setColor([...color]);
-            color[largest] = "pink";
-            color[i] = "pink";
+            color[largest] = PINK_COLOR;
+            color[i] = PINK_COLOR;
             i = largest;
         } else {
             i--;
-            color[i] = "green";
+            color[i] = GREEN_COLOR;
             setColor([...color]);
-            color[i] = "pink";
+            color[i] = PINK_COLOR;
         }
     } else {
         flag = false;

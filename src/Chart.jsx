@@ -10,6 +10,7 @@ import Bubble, {ClearBubble} from "./Bubble";
 import Selection, {ClearSelection} from "./Selection";
 import Quick, {ClearQuick} from "./Quick";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {PINK_COLOR} from "./Constants";
 
 let mm = null;
 const Chart = () => {
@@ -19,16 +20,16 @@ const Chart = () => {
     });
     let [a, setVal] = useState([30, 120, 10, 31, 39, 80, 20, 49, 36, 55]);
     let filledArray = [
-        "pink",
-        "pink",
-        "pink",
-        "pink",
-        "pink",
-        "pink",
-        "pink",
-        "pink",
-        "pink",
-        "pink",
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
+        PINK_COLOR,
     ];
     let [color, setColor] = useState(filledArray);
     const [algo, selectAlgo] = useState("bubble");
@@ -36,7 +37,7 @@ const Chart = () => {
     function check() {
         let interval;
         if (progress.disabled === false) {
-            for (let i = 0; i < a.length; i++) color[i] = "pink";
+            for (let i = 0; i < a.length; i++) color[i] = PINK_COLOR;
             setColor([...color]);
             document.getElementById("button").innerText = "Stop!";
             document.getElementById("size").disabled = true;
@@ -90,7 +91,7 @@ const Chart = () => {
             document.getElementById("speed").disabled = false;
             setProgress({color: "default", disabled: false});
             clearInterval(mm);
-            for (let i = 0; i < a.length; i++) color[i] = "pink";
+            for (let i = 0; i < a.length; i++) color[i] = PINK_COLOR;
             setColor([...color]);
         }
     }

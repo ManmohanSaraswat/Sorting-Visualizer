@@ -1,5 +1,5 @@
 import {Refresh} from "./Array";
-import {RED_COLOR} from "./Constants";
+import {GREEN_COLOR, PINK_COLOR, RED_COLOR} from "./Constants";
 
 let m = 0,
     j = 0,
@@ -14,21 +14,21 @@ function Selection(a, color, setVal, setColor, setProgress, mm) {
             a[i] = temp;
             color[m] = "#F59665";
             setVal([...a]);
-            if (m !== i) color[i] = "pink";
+            if (m !== i) color[i] = PINK_COLOR;
             m += 1;
             i = m;
             setColor([...color]);
         }
         color[i] = RED_COLOR;
         if (a[j] < a[i]) {
-            color[i] = "pink";
+            color[i] = PINK_COLOR;
             i = j;
             color[i] = RED_COLOR;
         }
-        color[j] = "green";
+        color[j] = GREEN_COLOR;
         j += 1;
         setColor([...color]);
-        color[j - 1] = "pink";
+        color[j - 1] = PINK_COLOR;
     } else {
         Refresh();
         setProgress({color: "default", disabled: false});

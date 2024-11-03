@@ -1,5 +1,5 @@
 import {Refresh} from "./Array";
-import {RED_COLOR} from "./Constants";
+import {GREEN_COLOR, PINK_COLOR, RED_COLOR} from "./Constants";
 
 let top = 100,
     stack = [],
@@ -39,7 +39,7 @@ function Quick(a, color, setVal, setColor, setProgress, mm) {
                 color[i] = RED_COLOR;
                 color[j] = RED_COLOR;
             } else {
-                color[j] = "green";
+                color[j] = GREEN_COLOR;
             }
             j += 1;
         }
@@ -58,8 +58,8 @@ function Quick(a, color, setVal, setColor, setProgress, mm) {
             }
         }
         setColor([...color]);
-        color[i] = "pink";
-        color[j - 1] = "pink";
+        color[i] = PINK_COLOR;
+        color[j - 1] = PINK_COLOR;
         setVal([...a]);
     } else {
         for (let k = 0; k <= a.length - 1; k++) color[k] = "#F59665";
